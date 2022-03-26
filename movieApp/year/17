@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Star Wars: Episode VIII - The Last Jedi</title>
+
+	<link rel="stylesheet" href="../static/css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div id="container">
+
+  
+
+<h1>Star Wars: Episode VIII - The Last Jedi (2017)</h1>
+
+<img class="right" src="../static/images/17.jpg" alt="Movie poster">
+
+<p>The highest grossing movie of 2017 in the U.S. is Star Wars: Episode VIII - The Last Jedi, earning $620,181,382  at the domestic box office. The hit sci-fi movie was directed by Rian Johnson and distributed by 	Walt Disney Studios.</p>
+
+<p>
+	
+
+	
+		Disney distributed this movie along with seven others on the list, making it the top distributor in recent years.
+	
+
+	
+		The Star Wars franchise has the most titles on this list with four total.
+	
+</p>
+
+<p id="links"><a href="https://www.imdb.com/title/tt2527336/">Click for IMDb page.</a></p>
+
+<p id="links"><a href="../index.html">Return to the list</a> to select a different movie.</p>
+
+
+
+</div>
+
+
+<footer class="bg-dark text-white">
+  <div class="text-left p-3" style="background-color: #000">
+		<h6 id="photoCred" style="color: #3d3d3d">Background image via: <a class="btn btn-outline-info btn-sm btn-floating purple-background" href="https://unsplash.com/photos/pPA5ActWLLI">Unsplash</a></h6>
+		<p style="color: #fff">This is a Flask project by Alexander Lugo for the Advanced Web Apps course at the University of Florida. Click for: <a class="btn btn-outline-danger btn-floating purple-background" href="https://github.com/alugo002" role="button"">Github Repo</a></p>
+  </div>
+</footer>
+
+
+</body>
+</html>

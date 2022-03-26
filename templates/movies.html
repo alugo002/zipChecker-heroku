@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{ gross['Title'] }} ({{ gross['Release-date'] }})</h1>
+
+<img class="right" src="{{ url_for('static', filename='images/' + gross['Index'] + '.jpg') }}" alt="Movie poster">
+
+<p>The highest grossing movie of {{ gross['Release-date'] }} in the U.S. is {{ gross['Title'] }}, earning {{ gross['Gross'] }} at the domestic box office. The hit {{ gross['Genre'] }} movie was directed by {{ gross['Director'] }} and distributed by {{ gross['Distributed-by'] }}.</p>
+
+<p>
+	{% if gross['Genre'] == 'super-hero' %}
+		This is part of the eight {{ gross['Genre'] }} movies on the list, the most common genre on the list.
+	{% endif %}
+
+	{% if 'Disney' in gross['Distributed-by']%}
+		Disney distributed this movie along with seven others on the list, making it the top distributor in recent years.
+	{% endif %}
+
+	{% if 'Star Wars' in gross['Title']%}
+		The Star Wars franchise has the most titles on this list with four total.
+	{% endif %}
+</p>
+
+<p id="links"><a href="{{ gross['imdb-url'] }}">Click for IMDb page.</a></p>
+
+<p id="links"><a href="{{ url_for('index') }}">Return to the list</a> to select a different movie.</p>
+
+{% endblock %}
