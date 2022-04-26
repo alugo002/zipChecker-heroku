@@ -1,4 +1,5 @@
-{% extends 'base.html' %}
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
 
 {% block styles %}
 {{ super() }}
@@ -9,14 +10,41 @@
 
 {% block content %}
 
-<h1>A list of the highest grossing movies in the U.S. since 2000</h1>
+<div id="container">
 
-<p>Click on a title for more details.</p>
+	<h1>Florida gentrification checker</h1>
+</div>
 
-    <ul>
-    {% for pair in pairs %}
-        <li><a href="{{ url_for( 'detail', num=pair[0] ) }}">{{ pair[1] }}</a></li>
-    {% endfor %}
-    </ul>
+<div id="container">
+
+	<h2>This app lets users search zip codes located in certain metro areas in Florida and pulls up information on possible gentrification in that zip code.</h2>
+</div>
+
+<div id="container">
+
+	<p>Type a zip code located in any the following metro areas:</p>
+	<ul>
+		{% for cityPair in cityPairs %}
+			<li><a href="{{ url_for( 'city', name=pair[0] ) }}">{{ pair[1] }}</a></li>
+		{% endfor %}
+		<li>Ft. Lauderdale</li>
+		<li>Jacksonville</li>
+		<li>Miami</li>
+		<li>Orlando</li>
+		<li>Tampa</li>
+		<li>West Palm Beach</li>
+	</ul>
+
+	{{ wtf.quick_form(form) }}
+
+  <ul>
+  	{% for pair in pairs %}
+    	<li><a href="{{ url_for( 'detail', num=pair[0] ) }}">{{ pair[1] }}</a></li>
+  	{% endfor %}
+  </ul>
+
+	<p>Or click one of the cities above for a list of zip codes in that area.</p>
+
+</div>
 
 {% endblock %}
