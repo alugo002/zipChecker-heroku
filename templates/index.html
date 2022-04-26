@@ -1,5 +1,4 @@
-{% extends 'bootstrap/base.html' %}
-{% import "bootstrap/wtf.html" as wtf %}
+{% extends 'base.html' %}
 
 {% block styles %}
 {{ super() }}
@@ -35,7 +34,13 @@
 		<li>West Palm Beach</li>
 	</ul>
 
-	{{ wtf.quick_form(form) }}
+
+	<form method="post">
+		<br>
+	  <input type="text" name='zipCode' placeholder="Type a zip code" value="{{ request.form['zip'] }}"></input>
+	  <button type="submit">Search</button>
+	 </form>
+
 
   <ul>
   	{% for pair in pairs %}
